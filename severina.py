@@ -7,7 +7,13 @@ class Severina():
             memory = open(name + '.json', 'r')
         except FileNotFoundError:
             memory = open(name + '.json', 'w')
-            memory.write('[["Severina"], {"/oi@morte_vida_severinabot": "Olá! Qual seu nome?", "tchau": "Tchau! Tchau!"}]')
+            memory.write('''[
+                            ["Severina"],
+                            {
+                                "/oi@morte_vida_severinabot": "Olá! Qual seu nome?",
+                                "/tchau@morte_vida_severinabot": "Pessoal, eu ainda estou adquirindo inteligência. Minha programadora deixou meu código aberto então você também pode contribuir. Tchau! Tchau! 🌱"
+                            }
+                        ]''')
             memory.close()
             memory = open(name + '.json', 'r')
         self.name = name
